@@ -27,7 +27,7 @@ end
 collections_hash.each do |collection_id, group|
   next if group.size < 3
 
-  collection = Tmdb.get_tmdb_collection(collection_id)
+  collection = Tmdb.get_collection(collection_id)
   next unless collection
 
   ids = group.map { |row| row["Id"] }
